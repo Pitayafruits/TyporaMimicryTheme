@@ -1,0 +1,421 @@
+@charset "UTF-8";
+
+/* CSS Document*/
+@import "night/mermaid.dark.css";
+@import "night/codeblock.dark.css";
+@import "night/sourcemode.dark.css"; 
+
+/* vietnamese */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(ash/Montserrat-v.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(ash/Montserrat-ext.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(ash/Montserrat.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* latin */
+@font-face {
+  font-family: 'Questrial';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Questrial'), local('Questrial-Regular'), url(ash/Questrial.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+
+
+/*
+root里定义的是界面颜色、文字颜色等
+text-color：文字颜色
+bg-color：背景颜色
+code-block-bg-color：代码块颜色
+side-bar-bg-color：文件夹、大纲处的颜色
+window-border：窗口边界颜色
+active-file-bg-color：todo_list的图案颜色（点勾）
+active-file-text-color：todo_list的文字颜色
+item-hover-text-color：打勾√颜色
+control-text-color：上方“文件、编辑……”的颜色
+*/
+:root {
+
+    --text-color: #666;
+    --bg-color: #f9f7f7;
+    --code-block-bg-color: #4d4d4d;
+    --side-bar-bg-color: #dbe2ef;
+    --window-border: 1px solid #555;
+    --active-file-bg-color: #fff;
+    --active-file-text-color: #666;
+    --item-hover-text-color: #666;
+    --control-text-color: #777;
+}
+
+
+/*字体大小*/ 
+html {
+	font-family: '手札体-简', sans-serif;
+	font-size: 18px;
+	-webkit-font-smoothing: antialiased;
+}
+
+html, body {
+	font-family: '手札体-简', sans-serif;
+    background-color: #fff;
+    color: #666;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/*目录*/
+.md-toc-inner:before {
+    content: "-";	
+}
+.md-toc,.md-image{
+    padding: 0 15px;
+    padding-top:15px;
+    padding-bottom:15px;
+    color: #777777;
+    box-shadow:4px 4px 4px #aaa;
+    blur:2px;
+    border-radius: 20px;
+    border-left: 4px solid #fff;
+    border-top: 4px solid #fff;
+}
+
+/*图片*/
+.md-image>.md-meta {
+    color: #0c0759;
+    font-size: 0.9rem;
+}
+
+/*代码块的背景颜色、周边留白*/
+pre,
+pre.md-meta-block,
+.md-fences {
+    	padding-left: 8px;
+    	padding-right: 8px;
+}
+
+pre.md-meta-block {
+    color: #bdbdbd;
+}
+
+/*代码块*/
+.md-fences .CodeMirror.CodeMirror-wrap {
+    padding: 0 15px;
+    padding-top:15px;
+    padding-bottom:15px;
+    color: #777777;
+    box-shadow:4px 4px 4px #aaa;
+    blur:2px;
+    border-left: 4px solid #fff;
+    border-top: 4px solid #fff;
+border-radius:10px;
+ }
+
+/*整个页面布局*/
+#write {
+	line-height: 1.5;
+	padding-left: 40px;
+    	padding-right: 60px;
+    	max-width: 800px;
+}
+
+/*六级标题的字体定义*/
+h1 {
+    font-size: 2.4rem;
+	color: #ffb3b3;
+}
+
+h2 {
+    font-weight: 600;
+	color:#cac4ed;
+}
+
+h3 {
+    font-size:1.4rem;
+	color: #80ffcc;
+}
+
+h1, h2, h3{
+text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: '手札体-简', sans-serif;
+	font-weight: normal;
+}
+
+h3 {
+	text-transform: uppercase;
+}
+
+h4{
+color: #9dd7fb;
+}
+
+h5 {
+	font-weight: bold;
+	color:#ffd9b3;
+}
+
+h6{
+	font-size:1rem;
+	color: #dadad7;
+	border-left: 4px solid #dddddd;
+	padding-left: 4px;
+}
+
+strong {
+color:#a7f1e9;
+}
+
+/*目录*/
+a {
+    color: #badef7;
+}
+
+/*链接*/
+[md-inline] a {
+   background-color: #dbe2ef;
+   color: #666;
+   text-decoration: none;
+    padding: 0 8px;
+    padding-top:8px;
+    padding-bottom:8px;
+    box-shadow:4px 4px 4px #aaa;
+    border-radius: 20px
+}
+
+code {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/*单元格*/
+td {
+	background-color: #fff;
+	padding: 2px 4px 2px 4px;
+    	box-shadow:3px 4px 3px #aaa;
+	border:1px solid #666
+}
+
+/*标题栏*/
+th { 
+  color: #666;
+  font-weight: 400;
+  padding: 5px 5px 5px 5px;
+  text-align: center;
+  background-color: #dbe2ef;
+  box-shadow:3px 4px 3px #aaa;
+  blur:2px;
+  border-radius: 20px;
+}
+
+/*表格*/
+table {
+width:100%;
+table-layout:fixed !important;
+word-break:break-word !important;
+}
+
+td:hover{
+  background-color: #dbe2ef;
+}
+th:hover{
+  background-color: #fff;
+}
+
+.file-list-item-summary {
+	height: 36px;
+    	margin-top: 8px;
+}
+
+.file-list-item {
+	padding-top: 16px;
+    	padding-bottom: 16px;
+}
+
+/*引用的图形*/
+#write {
+	cursor: -webkit-image-set(url("ash/cursor.png") 1x, url("ash/cursor@2x.png") 2x) 0 0, auto;
+}
+
+
+/*引用*/
+blockquote {
+    text-align: left;
+    font-family: 'Questrial', sans-serif;
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+    border-left: 4px solid #fff;
+    border-top: 4px solid #fff;
+    padding: 0 15px;
+    padding-top:15px;
+    padding-bottom:15px;
+    color: #777777;
+    box-shadow:4px 4px 4px #aaa;
+    blur:2px;
+    border-radius: 10px;
+}
+
+#write > blockquote:after {
+    content: no-close-quote;
+}
+
+/*TO-DO*/
+.task-list-item input{
+    width: 1.25rem;
+    height: 1.25rem;
+    display: block;
+    -webkit-appearance: initial;
+    top: -8px;
+    left: -18px;
+}
+
+/*前面的形状*/
+.task-list-item input:before{
+    border: 1px solid #d4d4d4;
+    border-radius: 1.2rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    background: #dbe2ef;
+    content: ' ';
+    transition: background-color 200ms ease-in-out;
+    display: block;
+    box-shadow:4px 4px 4px #aaa;
+    blur:2px;
+}
+
+/*打勾之前*/
+.task-list-item input:checked:before,
+.task-list-item input[checked]:before{
+    background: #dbe2ef;
+    border-width: 2px;
+    display:inline-block;
+    transition: background-color 200ms ease-in-out;
+}
+/*打勾之后*/
+.task-list-item input:checked:after,
+.task-list-item input[checked]:after {
+    opacity: 1;
+}
+
+.task-list-item input:after {
+    opacity: 1;
+    -webkit-transition: opacity 0.05s ease-in-out;
+    -moz-transition: opacity 0.05s ease-in-out;
+    transition: opacity 0.05s ease-in-out;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 0.325rem;
+    left: 0.28125rem;
+    width: 0.6375rem;
+    height: 0.4rem;
+    border: 3px solid #666;
+    border-top: 0;
+    border-right: 0;
+    content: ' ';
+    opacity: 0;
+}
+
+/*打勾之后*/
+.task-list-done {
+    text-decoration: line-through;
+    color: #dbe2ef;
+}
+
+/*分割线*/
+hr {
+  height: .1em;
+  margin: 20px 0px;
+  background-color: #e1e4e8;
+  border-left: 2px solid #fff;
+  border-top: 2px solid #fff;
+  box-shadow:2px 2px 2px #aaa;
+  blur:2px;
+  border-radius: 20px;
+}
+
+/*脚注*/
+.footnote-line {
+    color: #dddddd;
+}
+
+.md-footnote .md-meta {
+   color: #6886ba;
+}
+
+.md-content {
+    color: #d9cbbe;
+}
+
+.megamenu-content {
+    background: #666;
+}
+
+.megamenu-menu{
+    background-color: var(--side-bar-bg-color);
+}
+
+.megamenu-menu-header {
+    border-bottom: 0;
+}
+
+.megamenu-opened header {
+    background: transparent;
+    background: #666;
+}
+
+#m-import-local:hover .preference-item-hint {
+    color: var(--item-hover-text-color);
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(1) {
+    color: var(--item-hover-text-color);
+}
+
+.megamenu-menu-panel table td:nth-child(1) {
+    color: var(--text-color);
+}
+
+#recent-file-panel {
+    color: var(--blur-text-color);
+}
+
+footer.ty-footer {
+    border-top: 1px solid #555;
+}
+
+.CodeMirror-gutters {
+    border-right: none;
+}
+
+/*文字选中背景高亮*/
+mark {
+    background: #ffffff;
+    color: #db3f1e;
+    font-weight: bold;
+    border-bottom: 0px solid #ffffff;
+    padding: 0.0px;
+    margin: 0 0px;
+}
+::selection { background-color: #d1ff79; }
+
