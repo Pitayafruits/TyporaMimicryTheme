@@ -8,3 +8,13 @@
 3.对选中文字加以背景高亮；<br>
 4.对链接也采用圆角矩形处理；<br>
 5.还可以根据自己喜好去修改相应字体。<br>
+......<br>
+# 部分美化效果
+![](https://cdn.staticaly.com/gh/Pitayafruits/myPicRep@main/image/202211142311873.jpg)<br>
+![](https://cdn.staticaly.com/gh/Pitayafruits/myPicRep@main/image/202211142311112.jpg)<br>
+![](https://cdn.staticaly.com/gh/Pitayafruits/myPicRep@main/image/202211142312942.jpg)<br>
+![](https://cdn.staticaly.com/gh/Pitayafruits/myPicRep@main/image/202211142312626.jpg)<br>
+![](https://cdn.staticaly.com/gh/Pitayafruits/myPicRep@main/image/202211142312312.jpg)<br>
+![](https://cdn.staticaly.com/gh/Pitayafruits/myPicRep@main/image/202211142313073.jpg)<br>
+![](https://cdn.staticaly.com/gh/Pitayafruits/myPicRep@main/image/202211142313459.jpg)<br>
+![](https://cdn.staticaly.com/gh/Pitayafruits/myPicRep@main/image/202211142314160.jpg)<br>
