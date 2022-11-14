@@ -1,0 +1,2 @@
+# TyporaMimicryTheme
+个人目前自用的一款拟态+莫兰迪色系风格的Typora主题
